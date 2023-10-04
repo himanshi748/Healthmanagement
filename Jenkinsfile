@@ -18,7 +18,7 @@ pipeline {
            steps{
               script{
                   step([$class: 'NewRelicDeploymentNotifier', notifications: [[
-                      apiKey: '4', 
+                      apiKey: '796cb98baa9488995470019cf125c33eFFFFNRAL', 
                       applicationId: '', 
                       changelog: '', 
                       commit: '', 
