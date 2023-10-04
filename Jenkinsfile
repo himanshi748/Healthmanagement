@@ -17,7 +17,22 @@ pipeline {
         stage('New Relic'){
            steps{
               script{
-                  step([$class: 'NewRelicDeploymentNotifier', notifications: [[apiKey: '${newrelic-api}', applicationId: '', changelog: '', commit: '', deeplink: '', deploymentId: '', deploymentType: 'BASIC', description: '', entityGuid: 'MzYyNzM0NXxFWFR8U0VSVklDRXwtMjcxMTk0NzAyOTI0NzA1MTA2Mw', european: false, groupId: '', revision: '', timestamp: '', user: 'himanshi.satpute@cloudeq.com', version: '1']]])
+                  step([$class: 'NewRelicDeploymentNotifier', notifications: [[
+                      apiKey: '4', 
+                      applicationId: '', 
+                      changelog: '', 
+                      commit: '', 
+                      deeplink: 'http://ceq-ict-laptop-161:8080/job/new%20relic%20two/configure', 
+                      deploymentId: '', 
+                      deploymentType: 'BASIC', 
+                      description: '', 
+                      entityGuid: 'MzYyNzM0NXxFWFR8U0VSVklDRXwtMjcxMTk0NzAyOTI0NzA1MTA2Mw',
+                      european: false, 
+                      groupId: '', 
+                      revision: '', 
+                      timestamp: '', 
+                      user: 'himanshi.satpute@cloudeq.com', 
+                      version: '1']]])
                    }
             }
         }
