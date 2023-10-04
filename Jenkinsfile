@@ -1,5 +1,8 @@
 pipeline {
     agent any
+     environment{
+        entityGuid = 'MzYyNzM0NXxFWFR8U0VSVklDRXwtMjcxMTk0NzAyOTI0NzA1MTA2Mw'
+    }
 
     stages {
         stage('Build') {
@@ -26,7 +29,7 @@ pipeline {
                       deploymentId: '', 
                       deploymentType: 'BASIC', 
                       description: '', 
-                      entityGuid: 'MzYyNzM0NXxFWFR8U0VSVklDRXwtMjcxMTk0NzAyOTI0NzA1MTA2Mw',
+                      entityGuid: '${entityGuid}',
                       groupId: '', 
                       revision: '', 
                       timestamp: '', 
