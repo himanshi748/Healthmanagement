@@ -17,7 +17,7 @@ pipeline {
         stage('New Relic'){
            steps{
               script{
-                  step([$class: 'NewRelicDeploymentNotifier', notifications: [[apiKey: 'NRAK-OTDFMH5G2LAZE5VWOZ0WRBJ5TMA', applicationId: '', changelog: '', commit: '', deeplink: '', deploymentId: '', deploymentType: 'BASIC', description: '', entityGuid: 'MzYyNzM0NXxFWFR8U0VSVklDRXwtMjcxMTk0NzAyOTI0NzA1MTA2Mw', european: false, groupId: '', revision: '', timestamp: '', user: 'himanshi.satpute@cloudeq.com', version: '1']]])
+                  step([$class: 'NewRelicDeploymentNotifier', notifications: [[apiKey: '${newrelic-api}', applicationId: '', changelog: '', commit: '', deeplink: '', deploymentId: '', deploymentType: 'BASIC', description: '', entityGuid: 'MzYyNzM0NXxFWFR8U0VSVklDRXwtMjcxMTk0NzAyOTI0NzA1MTA2Mw', european: false, groupId: '', revision: '', timestamp: '', user: 'himanshi.satpute@cloudeq.com', version: '1']]])
                    }
             }
         }
